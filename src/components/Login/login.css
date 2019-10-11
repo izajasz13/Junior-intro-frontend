@@ -1,5 +1,6 @@
 body {
-    background-color: #DADADA;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./background.png");
+    background-size: cover;
   }
   body > .grid {
     height: 100%;
@@ -9,5 +10,8 @@ body {
   }
   .column {
     max-width: 450px;
-    margin-top: 180px;
+    margin: auto;
+  }
+  .ui.middle.aligned.center.aligned.grid {
+      height: 100vh;
   }
