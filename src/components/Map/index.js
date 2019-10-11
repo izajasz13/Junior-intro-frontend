@@ -4,11 +4,9 @@ import { login } from '../../actions';
 
 class Map extends React.Component {
     render() {
-        localStorage.setItem('userId', '1234');
         return (
             <div>
                 <ul>
-                    {console.log(this.props.user)}
                     <li>Dział 1</li>
                     <li>Dział 2</li>
                     <li>Dział 3</li>
