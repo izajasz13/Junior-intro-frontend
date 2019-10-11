@@ -17,7 +17,4 @@ const mapStateToProps = state => {
     return { user: state.user, section: state.section };
 };
 
-export default connect(
-    mapStateToProps,
-    {}
-)(Tasks);
+export default connect(mapStateToProps)(Tasks);
