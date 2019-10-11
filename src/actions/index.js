@@ -14,12 +14,12 @@ export const fetchUser = id => async dispatch => {
     dispatch({ type: 'FETCH_USER', payload: response.data });
 };
 
-export const fetchTasks = id => async dispatch => {
+export const fetchSection = id => async dispatch => {
     const userId = localStorage.getItem('userId');
     if (!id || !userId) return;
     const response = await heroku.get('section/' + id, { headers: { userId } });
     dispatch({
-        type: 'FETCH_TASKS',
+        type: 'FETCH_SECTION',
         payload: { taskList: response.data.taskList, userState: response.data.userState }
     });
 };
