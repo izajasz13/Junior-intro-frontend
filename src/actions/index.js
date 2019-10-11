@@ -2,9 +2,16 @@ import heroku from '../apis/heroku';
 
 export const login = (login, password) => async dispatch => {
     if (!login || !password) return;
-    const response = await heroku.post('login/', { headers: { login, password } });
+    const response = await heroku.post('login/', { body: { login, password } });
+    if (!response.data.userId) return;
     localStorage.setItem('userId', response.data.userId);
     dispatch({ type: 'LOGIN', payload: response.data });
+};
+
+export const fetchUser = id => async dispatch => {
+    if (!id) return;
+    const response = await heroku.get('user/' + id);
+    dispatch({ type: 'FETCH_USER', payload: response.data });
 };
 
 export const fetchTasks = id => async dispatch => {
