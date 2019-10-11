@@ -5,13 +5,14 @@ body {
   body > .grid {
     height: 100%;
   }
-  .image {
-    margin-top: -100px;
-  }
   .column {
     max-width: 450px;
     margin: auto;
   }
   .ui.middle.aligned.center.aligned.grid {
       height: 100vh;
+  }
+  .ui.fluid.large.submit.button {
+      background-color: rgb(146, 24, 3);
+      color: antiquewhite;
   }

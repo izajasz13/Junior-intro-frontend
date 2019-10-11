@@ -5,11 +5,6 @@ const Login = () => {
     return (
         <div class="ui middle aligned center aligned grid">
             <div class="column">
-                <h2 class="ui teal image header">
-                    <div class="content">
-                    Zaloguj się na konto
-                    </div>
-                </h2>
                 <form class="ui large form">
                     <div class="ui stacked segment">
                         <div class="field">
@@ -24,7 +19,7 @@ const Login = () => {
                                 <input type="password" name="password" placeholder="Hasło"></input>
                             </div>
                         </div>
-                        <div class="ui fluid large teal submit button">Zaloguj</div>
+                        <div class="ui fluid large submit button">Zaloguj</div>
                     </div>
 
                     <div class="ui error message"></div>
