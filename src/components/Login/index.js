@@ -1,17 +1,36 @@
 import React from 'react';
+import "./login.css";
 
 const Login = () => {
     return (
-        <div>
-            <form id="formLogin">
-                <label htmlFor="loginInput">Login:</label>
-                <input type="text" id="loginInput" placeholder="Login" required />
-                <label htmlFor="passwordInput">Password:</label>
-                <input type="password" id="passwordInput" placeholder="Password" required />
-                <button type="submit" form="formLogin">
-                    Login
-                </button>
-            </form>
+        <div class="ui middle aligned center aligned grid">
+            <div class="column">
+                <h2 class="ui teal image header">
+                    <div class="content">
+                    Zaloguj się na konto
+                    </div>
+                </h2>
+                <form class="ui large form">
+                    <div class="ui stacked segment">
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="login" placeholder="Login"></input>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="password" name="password" placeholder="Hasło"></input>
+                            </div>
+                        </div>
+                        <div class="ui fluid large teal submit button">Zaloguj</div>
+                    </div>
+
+                    <div class="ui error message"></div>
+
+                </form>
+            </div>
         </div>
     );
 };
