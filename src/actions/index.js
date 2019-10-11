@@ -7,7 +7,7 @@ export const login = (login, password) => async dispatch => {
     dispatch({ type: 'LOGIN', payload: response.data });
 };
 
-export const fetchSection = id => async dispatch => {
+export const fetchTasks = id => async dispatch => {
     const userId = localStorage.getItem('userId');
     if (!id || !userId) return;
     const response = await heroku.get('section/' + id, { headers: { userId } });
