@@ -1,7 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const UserBar = () => {
-    return <div> UserBar </div>;
+class UserBar extends React.Component {
+    render() {
+        return <div> UserBar </div>;
+    }
+}
+
+const mapStateToProps = state => {
+    return { user: state.user, section: state.section };
 };
 
-export default UserBar;
+export default connect(
+    mapStateToProps,
+    {}
+)(UserBar);
