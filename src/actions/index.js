@@ -23,3 +23,14 @@ export const fetchSection = id => async dispatch => {
         payload: { taskList: response.data.taskList, userState: response.data.userState }
     });
 };
+
+export const postAnswer = (taskId, answer) => async dispatch => {
+    const userId = localStorage.getItem('userId');
+    if (!taskId || !answer || !userId) return;
+    const response = await heroku.post('answer/', { body: { userId, taskId, answer } });
+    if (!response.data.correctAnswerNumber) return;
+    dispatch({
+        type: 'POST_ANSWER',
+        payload: { answer, taskId, correctAnswerNumber: response.data.correctAnswerNumber }
+    });
+};
