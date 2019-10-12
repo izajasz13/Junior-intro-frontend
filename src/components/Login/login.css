@@ -1,3 +1,7 @@
+body {
+    background-color: #DADADA;
+    font-family: 'Tahoma';
+  }
   body > .grid {
     height: 100%;
   }
