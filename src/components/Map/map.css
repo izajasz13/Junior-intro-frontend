@@ -8,7 +8,17 @@ body {
     background-size: cover;
     height: 100vh;
     margin: 0;
+    position: relative;
 }
-.tasks {
-    margin: 0;
+.ui.red.button {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(146, 24, 3);
+    color: antiquewhite;
+}
+#stepOne {
+    position: absolute;
+    top: 60%;
+    left: 20%;
 }
