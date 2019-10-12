@@ -11,7 +11,7 @@ body {
   }
   .ui.middle.aligned.center.aligned.grid {
       height: 100vh;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./treasure-map.jpg");
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./pirate-map.jpg");
       background-size: cover;
       margin: 0;
   }
