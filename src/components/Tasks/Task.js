@@ -10,11 +10,10 @@ class Task extends React.Component {
                 <div className="taskText">
                     <div>{task.description}</div>
                     <div>
-                    <br /> Nagroda: <br />
+                        <br /> Nagroda: <br />
                         Doświadczenie: {task.prize.exp} <br /> Monety: {task.prize.coins}
                     </div>
                     <div>
-                    <br /> Test: <br />
                         {this.renderQuestions()}
                         <br />
                         <br />
@@ -39,6 +38,7 @@ class Task extends React.Component {
             });
             return (
                 <div key={key}>
+                    <br /> Test: <br />
                     {question.question}
                     <br />
                     {answers}
