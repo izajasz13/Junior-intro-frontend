@@ -9,6 +9,7 @@
     font-size: 30px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./texture.jpg");
     color: #e2eb83;
+    border-bottom: 3px solid rgba(140, 115, 0, 0.5)
 }
 
 .user-bar-container img {
@@ -18,7 +19,8 @@
 
 .user-bar-container button {
     color: #bfc48b !important;
-    background-color: rgba(0,0,0,0.8) !important;
+    background-color: rgba(0,0,0,0.6) !important;
+    padding: 3px;
 }
 
 .user-bar-container button:hover {
@@ -36,4 +38,35 @@
 
 .ui.indicating.progress.active .label{
     color: #e2eb83;
+}
+
+.spellbook {
+    font-size: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px rgba(0,0,0,0.4) solid;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 5px;
+    background-color: rgba(0,0,0,0.2);
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+    line-height: 1.9;
+}
+
+.spellbook:hover {
+    background-color: rgba(30,30,30,0.2)
+
+}
+
+.spellbook img {
+    width: 22px;
+    height: 22px;
+}
+
+.right-buttons {
+    display: flex;
+    align-items: center;
 }

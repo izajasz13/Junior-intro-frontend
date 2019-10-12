@@ -26,8 +26,14 @@ class UserBar extends React.Component {
                 <div>
                     1000 <img src="goal.png" />
                 </div>
+                <div className="right-buttons">
+                <div className="spellbook">
+                    <img src="open-book.png" />
+                    <div>Księga zaklęć</div>
+                </div>
                 <div>
-                    <button className="ui button">Logout</button>
+                    <button className="ui button"><img src="logout.png" /></button>
+                </div>
                 </div>
             </div>
         );
