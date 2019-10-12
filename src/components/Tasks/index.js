@@ -19,7 +19,6 @@ class Tasks extends React.Component {
     }
 
     render() {
-        console.log(this.props.section);
         return (
             <div style={{ color: 'white' }}>
                 {this.state.redirectToLogin ? <Redirect push to="/login" /> : ''}
