@@ -20,7 +20,7 @@ class Tasks extends React.Component {
     render() {
         return (
             <div style={{ color: 'white' }}>
-                {this.state.redirectToLogin ? <Redirect push to="/login" /> : ''}
+                {!this.props.user._id ? <Redirect push to="/login" /> : ''}
                 <UserBar />
                 <TaskList />
             </div>
