@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchUser, logout, fetchKnowledgeBaseList } from '../../actions';
 import { Modal } from 'semantic-ui-react';
 
@@ -31,6 +32,11 @@ class UserBar extends React.Component {
         return (
             <>
                 <div className="user-bar-container">
+                    <Link to="/">
+                        <button className="ui button">
+                            <i className="reply icon"></i>
+                        </button>
+                    </Link>
                     <div>{user.name}</div>
                     <div>
                         <div className="ui indicating progress active" data-percent="50">
