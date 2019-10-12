@@ -17,10 +17,10 @@ class TaskList extends React.Component {
         const tasks = this.props.section.tasks.map(task => {
             console.log(task);
             return (
-                <button key={task.number} id={task._id} onClick={this.clickTask} className="step">
+                <button key={task.number} id={task.taskId} onClick={this.clickTask} className="step">
                     <i className="shopping cart icon"></i>
                     <div className="content">
-                        <div className="title">{task.number + '. ' + task.name}</div>
+                        <div className="title">{task.number + '. ' + (task.name || task.title)}</div>
                         <div className="description">Skompletuj ekwipunek</div>
                     </div>
                 </button>

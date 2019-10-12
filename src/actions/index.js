@@ -53,6 +53,7 @@ export const fetchTask = id => async dispatch => {
     } catch (error) {
         return console.log('fetchTask error: ', error);
     }
+    console.log(response.data);
     dispatch({
         type: 'FETCH_TASK',
         payload: response.data
