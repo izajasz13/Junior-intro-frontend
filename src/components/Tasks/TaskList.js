@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import './tasks.css';
 
 class TaskList extends React.Component {
     render() {
@@ -7,11 +8,43 @@ class TaskList extends React.Component {
     }
     renderTasks() {
         return (
-            <ul>
-                <li>Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li>
-            </ul>
+            <div class="ui vertical steps">
+                <div class="step">
+                    <i class="shopping cart icon"></i>
+                    <div class="content">
+                        <div class="title">Wyzwanie Pierwsze</div>
+                        <div class="description">Skompletuj ekwipunek</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <i class="user secret icon"></i>
+                    <div class="content">
+                        <div class="title">Wyzwanie Drugie</div>
+                        <div class="description">Zapytaj Mędrca</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <i class="beer icon"></i>
+                    <div class="content">
+                        <div class="title">Wyzwanie Trzecie</div>
+                        <div class="description">Skompletuj Drużynę</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <i class="book icon"></i>
+                    <div class="content">
+                        <div class="title">Wyzwanie Czwarte</div>
+                        <div class="description">Sprawdź swoją wiedzę</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <i class="gitkraken icon"></i>
+                    <div class="content">
+                        <div class="title">Wyzwanie Piąte</div>
+                        <div class="description">Pokonaj Smoka</div>
+                    </div>
+                </div>
+            </div>
         );
     }
 }
