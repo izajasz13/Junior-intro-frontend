@@ -53,9 +53,6 @@ class UserBar extends React.Component {
                         {user.coins}
                         <img src="dollar.png" alt="dollar" />
                     </div>
-
-                </div>
-            </div>
                     <div>
                         {user.experience} <img src="goal.png" alt="goal" />
                     </div>
@@ -69,17 +66,16 @@ class UserBar extends React.Component {
                                 <img src="logout.png" alt="logout" />
                             </button>
                         </div>
-
                     </div>
                 </div>
-<Modal open={this.state.isModalOpen} style={{background: 'black'}}>
-            <Modal.Header>
-                <div onClick={this.handleToggleModal} className="modal-header">
-                    <span>
-                        X
-                    </span>
-                </div>
-            </Modal.Header>
+            <Modal open={this.state.isModalOpen} style={{background: 'black'}}>
+                <Modal.Header>
+                    <div onClick={this.handleToggleModal} className="modal-header">
+                        <span>
+                            X
+                        </span>
+                    </div>
+                </Modal.Header>
                 <Modal.Content>
                 <div className="content-inner">
                     <div className="left-list">
@@ -103,6 +99,7 @@ class UserBar extends React.Component {
                             </>
                         )}
                         </div>
+                    </div>
                     </Modal.Content>
                 </Modal>
             </>
