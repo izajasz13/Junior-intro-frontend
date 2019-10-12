@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/frontend/static/css/main.1f9ed280.chunk.css",
-    "main.js": "/frontend/static/js/main.d6b18868.chunk.js",
-    "main.js.map": "/frontend/static/js/main.d6b18868.chunk.js.map",
+    "main.js": "/frontend/static/js/main.a1d35e66.chunk.js",
+    "main.js.map": "/frontend/static/js/main.a1d35e66.chunk.js.map",
     "runtime-main.js": "/frontend/static/js/runtime-main.8fdc294c.js",
     "runtime-main.js.map": "/frontend/static/js/runtime-main.8fdc294c.js.map",
     "static/js/2.dbec81c4.chunk.js": "/frontend/static/js/2.dbec81c4.chunk.js",
     "static/js/2.dbec81c4.chunk.js.map": "/frontend/static/js/2.dbec81c4.chunk.js.map",
     "index.html": "/frontend/index.html",
-    "precache-manifest.ab9b046a6f4fcd01dbde9092753f6e8c.js": "/frontend/precache-manifest.ab9b046a6f4fcd01dbde9092753f6e8c.js",
+    "precache-manifest.de7143f26353a061aebbf99fbafe0462.js": "/frontend/precache-manifest.de7143f26353a061aebbf99fbafe0462.js",
     "service-worker.js": "/frontend/service-worker.js",
     "static/css/main.1f9ed280.chunk.css.map": "/frontend/static/css/main.1f9ed280.chunk.css.map",
     "static/media/map.css": "/frontend/static/media/open-book-icon.3ddd78c3.png",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.8fdc294c.js",
     "static/js/2.dbec81c4.chunk.js",
     "static/css/main.1f9ed280.chunk.css",
-    "static/js/main.d6b18868.chunk.js"
+    "static/js/main.a1d35e66.chunk.js"
   ]
 }
