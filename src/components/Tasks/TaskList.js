@@ -6,13 +6,11 @@ class TaskList extends React.Component {
         return <div> {this.renderTasks()}</div>;
     }
     renderTasks() {
-        return (
-            <ul>
-                <li>Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li>
-            </ul>
-        );
+        if (this.props.section.tasks.length === 0) return <div></div>;
+        const tasks = this.props.section.tasks.map(task => {
+            return <li key={task.number}>{task.name}</li>;
+        });
+        return <ul>{tasks}</ul>;
     }
 }
 

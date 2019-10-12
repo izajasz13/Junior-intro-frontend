@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchUser } from '../../actions';
 import './map.css';
@@ -22,9 +22,21 @@ class Map extends React.Component {
         return (
             <div className="map">
                 {this.state.redirectToLogin ? <Redirect push to="/login" /> : ''}
-                <button class="ui red button" id="stepOne">Dział 1</button>'>
-                <button class="ui red button" id="stepTwo">Dział 2</button>'>
-                <button class="ui red button" id="stepThree">Dział 3</button>'>
+                <Link to="/tasks/1">
+                    <button class="ui red button" id="stepOne">
+                        Dział 1
+                    </button>
+                </Link>
+                <Link to="/tasks/2">
+                    <button class="ui red button" id="stepOne">
+                        Dział 1
+                    </button>
+                </Link>
+                <Link to="/tasks/3">
+                    <button class="ui red button" id="stepOne">
+                        Dział 1
+                    </button>
+                </Link>
             </div>
         );
     }
