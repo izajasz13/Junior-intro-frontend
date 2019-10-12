@@ -20,7 +20,7 @@ export const fetchSection = id => async dispatch => {
     const response = await heroku.get('section/' + id, { headers: { userId } });
     dispatch({
         type: 'FETCH_SECTION',
-        payload: { taskList: response.data.taskList, userState: response.data.userState }
+        payload: response.data
     });
 };
 

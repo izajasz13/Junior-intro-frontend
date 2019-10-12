@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchUser } from '../../actions';
 import './map.css';
@@ -23,9 +23,21 @@ class Map extends React.Component {
             <div className="map">
                 {this.state.redirectToLogin ? <Redirect push to="/login" /> : ''}
                 <ul className="tasks">
-                    <li>Dział 1</li>
-                    <li>Dział 2</li>
-                    <li>Dział 3</li>
+                    <li>
+                        <Link to="/tasks/1">
+                            <button>Dział 1</button>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/tasks/2">
+                            <button>Dział 2</button>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/tasks/3">
+                            <button>Dział 3</button>
+                        </Link>
+                    </li>
                 </ul>
             </div>
         );
