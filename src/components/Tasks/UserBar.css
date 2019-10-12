@@ -70,3 +70,60 @@
     display: flex;
     align-items: center;
 }
+
+.modal-header {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 10px;
+}
+
+.modal-header span {
+    padding-left: 7px;
+    padding-right: 7px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 2px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-header span:hover {
+    background: rgba(0,0,0,0.2);
+}
+
+.header {
+    background-color: #E6BB48 !important;
+}
+
+.content {
+    background-color: #E6BB48 !important;
+}
+
+.content-inner {
+    display: flex;
+}
+
+.left-list {
+    border-right: 1px solid rgba(0,0,0,0.4);
+    width: 20%;
+}
+
+.right-content {
+    width: 80%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.left-list-element {
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.4);
+    border-radius: 10px;
+    margin: 5px;
+    text-align: center;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.left-list-element:hover {
+    background: rgba(0,0,0,0.2);
+}
