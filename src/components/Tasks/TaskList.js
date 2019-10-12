@@ -10,7 +10,7 @@ class TaskList extends React.Component {
         const tasks = this.props.section.tasks.map(task => {
             return <li key={task.number}>{task.name}</li>;
         });
-        return <ul></ul>;
+        return <ul>{tasks}</ul>;
     }
 }
 
