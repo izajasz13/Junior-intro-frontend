@@ -3,7 +3,6 @@ import heroku from '../apis/heroku';
 export const login = (username, password) => async dispatch => {
     if (!username || !password) return;
     const response = await heroku.post('login/', { username, password });
-    console.log('res:', response);
     if (!response.data._id) return;
     localStorage.setItem('userId', response.data._id);
     dispatch({ type: 'LOGIN', payload: response.data });
