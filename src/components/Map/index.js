@@ -65,16 +65,16 @@ class Map extends React.Component {
                     {/* <i className="book icon" /> */}
                     <span>Księga 1</span>
                 </Link>
-                <Link to="/tasks/2" className="button-element" style={{left: width2+'%', top: height2+'%'}}>
+                <Link to="/tasks/2" className="button-element" style={{left: width2+'%', top: height2+'%', opacity: '0.5'}}>
                     <span>Księga 2</span>
                 </Link>
-                <Link to="/tasks/3" className="button-element" style={{left: width3+'%', top: height3+'%'}}>
+                <Link to="/tasks/3" className="button-element" style={{left: width3+'%', top: height3+'%', opacity: '0.5'}}>
                     <span>Księga 3</span>
                 </Link>
-                <Link to="/tasks/4" className="button-element" style={{left: width4+'%', top: height4+'%'}}>
+                <Link to="/tasks/4" className="button-element" style={{left: width4+'%', top: height4+'%', opacity: '0.5'}}>
                     <span>Księga 4</span>
                 </Link>
-                <Link to="/tasks/5" className="button-element" style={{left: width5+'%', top: height5+'%'}}>
+                <Link to="/tasks/5" className="button-element" style={{left: width5+'%', top: height5+'%', opacity: '0.5'}}>
                     <span>Księga 5</span>
                 </Link>
             </div>
