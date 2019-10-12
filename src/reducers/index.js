@@ -9,6 +9,7 @@ export default combineReducers({
     user: userReducer,
     section: sectionReducer,
     answers: answersReducer,
+    knowledge: knowledgeReducer,
     knowledgeList: knowledgeReducer,
     task: taskReducer
 });
