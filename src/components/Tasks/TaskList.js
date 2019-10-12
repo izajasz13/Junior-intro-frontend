@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './tasks.css';
+import { fetchTask } from '../../actions';
 
 class TaskList extends React.Component {
     clickTask = event => {
@@ -11,7 +12,6 @@ class TaskList extends React.Component {
         return <div> {this.renderTasks()}</div>;
     }
     renderTasks() {
-        });
         return (
             <div class="ui vertical steps">
                 <div class="step">
