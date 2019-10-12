@@ -1,15 +1,27 @@
 export default (
     state = {
-        description: '',
+        title: 'Instalacja VS Code',
+        description: 'Zainstaluj Visual Studio Code na swoim komputerze.',
         prize: {
-            exp: 0,
-            coins: 0
+            exp: 3,
+            coins:5,
         },
-        questions: [],
-        answers: {
-            number: 0,
-            content: []
-        }
+        questions: [{
+            question: 'Czy zaintalowałeś VS Code?',
+            answers: [
+                {
+                    number: 1,
+                    content: 'Tak',
+                },
+                { 
+                    number: 2,
+                    content: 'Nie'
+                }
+            ]
+        }],
+        answers: [
+            1
+        ]
     },
     action
 ) => {
