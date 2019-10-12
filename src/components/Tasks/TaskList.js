@@ -3,10 +3,15 @@ import { connect } from 'react-redux';
 import './tasks.css';
 
 class TaskList extends React.Component {
+    clickTask = event => {
+        this.props.fetchTask(event.target.id);
+    };
+
     render() {
         return <div> {this.renderTasks()}</div>;
     }
     renderTasks() {
+        });
         return (
             <div class="ui vertical steps">
                 <div class="step">
@@ -53,4 +58,7 @@ const mapStateToProps = state => {
     return { user: state.user, section: state.section };
 };
 
-export default connect(mapStateToProps)(TaskList);
+export default connect(
+    mapStateToProps,
+    { fetchTask }
+)(TaskList);

@@ -1,24 +1,52 @@
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./background.png");
-    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./pirate-map.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
 .map {
-    background-image: url("./background.png");
+    background-image: url("./pirate-map.jpg");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
     margin: 0;
-    position: relative;
+    width: 100vw;
 }
-.ui.red.button {
+.tasks {
+    margin: 0;
+}
+
+.button-element {
+    width: 8vw;
+    height: 8vw;
+    /* background-color: #856F4B; */
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    background-color: rgb(146, 24, 3);
-    color: antiquewhite;
+    margin: auto;
+    display: flex;
+    position: fixed;
+    background-image: url('open-book-icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    /* opacity: 0.6; */
 }
-#stepOne {
-    position: absolute;
-    top: 60%;
-    left: 20%;
+
+.button-element span {
+    margin: auto;
+    /* position: absolute;
+    left: 23px;
+    top: 5px; */
+    color: #e2eb83;
+}
+
+.button-element i {
+    font-size: 80px;
+    position: relative;
+    left: 80;
+    top: 180;
+    color: #211200;
+    opacity: 0.8;
 }
