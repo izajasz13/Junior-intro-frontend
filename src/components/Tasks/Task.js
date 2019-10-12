@@ -31,14 +31,21 @@ class Task extends React.Component {
             const key = question.question;
             const answers = question.answers.map(answer => {
                 return (
-                    <label>
-                        <input type="radio" name="key" /> {answer}
+                    <label key={answer.number}>
+                        <input type="radio" name="key" />
+                        {answer.content}
                     </label>
                 );
             });
-            return <div key={key}>{answers}</div>;
+            return (
+                <div key={key}>
+                    {question.question}
+                    <br />
+                    {answers}
+                </div>
+            );
         });
-        return <div>{questions}</div>;
+        return <div> {questions} </div>;
     };
 }
 
