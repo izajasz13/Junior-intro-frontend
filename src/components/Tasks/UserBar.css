@@ -127,3 +127,12 @@
 .left-list-element:hover {
     background: rgba(0,0,0,0.2);
 }
+
+.right-header {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.selected {
+    background: rgba(0,0,0,0.2);
+}
