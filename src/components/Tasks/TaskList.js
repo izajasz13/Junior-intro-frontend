@@ -4,6 +4,12 @@ import './tasks.css';
 import { fetchTask } from '../../actions';
 
 class TaskList extends React.Component {
+    componentDidMount() {
+        if (!!this.props.section.tasks && this.props.section.tasks.length !== 0) {
+            this.props.fetchTask(this.props.section.tasks[0].taskId);
+        }
+    }
+
     clickTask = event => {
         this.props.fetchTask(event.target.id);
     };
@@ -12,10 +18,8 @@ class TaskList extends React.Component {
         return <div> {this.renderTasks()}</div>;
     }
     renderTasks() {
-        console.log(this.props.section.tasks);
         if (this.props.section.tasks.length === 0) return <div></div>;
         const tasks = this.props.section.tasks.map(task => {
-            console.log(task);
             return (
                 <button key={task.number} id={task.taskId} onClick={this.clickTask} className="step">
                     <i className="wrench icon"></i>
