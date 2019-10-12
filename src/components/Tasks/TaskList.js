@@ -4,6 +4,13 @@ import './tasks.css';
 import { fetchTask } from '../../actions';
 
 class TaskList extends React.Component {
+    componentDidMount() {
+        if (!!this.props.section.tasks && this.props.section.tasks.length !== 0) {
+            console.log('Smiling fertilizer: ');
+            this.props.fetchTask(this.props.section.tasks[0].taskId);
+        }
+    }
+
     clickTask = event => {
         this.props.fetchTask(event.target.id);
     };

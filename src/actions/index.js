@@ -78,26 +78,26 @@ export const postAnswer = (taskId, answer) => async dispatch => {
 
 export const fetchKnowledgeBaseList = () => async dispatch => {
     try {
-        const response = await heroku.get('/knowledge')
-        console.log(response)
-        dispatch({ 
+        const response = await heroku.get('/knowledge');
+        console.log(response);
+        dispatch({
             type: 'FETCH_KNOWLEDGE_BASE_LIST',
-            payload: response.data,
-        })
+            payload: response.data
+        });
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
-}
+};
 
 export const fetchKnowledgeBaseElement = id => async dispatch => {
     try {
-        const response = await heroku.get('/knowledge/'+id)
-        console.log(response)
-        dispatch({ 
+        const response = await heroku.get('/knowledge/' + id);
+        console.log(response);
+        dispatch({
             type: 'FETCH_KNOWLEDGE_BASE_ELEMENT',
-            payload: response.data,
-        })
+            payload: response.data
+        });
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
-}
+};

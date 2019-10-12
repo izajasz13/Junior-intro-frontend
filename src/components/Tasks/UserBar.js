@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchUser, logout, fetchKnowledgeBaseList } from '../../actions';
+import { fetchUser, logout, fetchKnowledgeBaseList, fetchKnowledgeBaseElement } from '../../actions';
 import { Modal } from 'semantic-ui-react';
 
 import './UserBar.css';
@@ -87,6 +87,7 @@ class UserBar extends React.Component {
                                     console.log(el);
                                     return (
                                         <div
+                                            key={el.knowledgeId}
                                             className={`left-list-element ${
                                                 this.state.selectedId === el.knowledgeId ? 'selected' : ''
                                             }`}
@@ -107,7 +108,7 @@ class UserBar extends React.Component {
                                         <div className="right-content">
                                             {this.props.knowledgeElement.content
                                                 ? this.props.knowledgeElement.content.split(';').map(el => {
-                                                      return <div>{el}</div>;
+                                                      return <div key={el}>{el}</div>;
                                                   })
                                                 : null}
                                         </div>
