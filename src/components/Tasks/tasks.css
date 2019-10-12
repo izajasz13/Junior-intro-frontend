@@ -5,3 +5,14 @@
 .ui.vertical.steps .step {
     background:#ffbf47;
 }
+
+.task {
+    background-color: yellow;
+    position: relative;
+    left: 100px;
+    top: 20px;
+}
+
+.flex {
+    display: flex;
+}
