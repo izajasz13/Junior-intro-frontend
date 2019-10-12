@@ -15,6 +15,7 @@ export default (
 ) => {
     switch (action.type) {
         case 'FETCH_TASK':
+            console.log('taskinred: ', action.payload);
             return action.payload;
         case 'LOGOUT':
             return {
