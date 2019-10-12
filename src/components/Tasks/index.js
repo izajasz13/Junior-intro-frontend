@@ -5,6 +5,7 @@ import UserBar from './UserBar';
 import TaskList from './TaskList';
 import Task from './Task';
 import { fetchSection } from '../../actions';
+import './tasks.css';
 
 class Tasks extends React.Component {
     constructor(props) {
@@ -23,8 +24,10 @@ class Tasks extends React.Component {
             <div style={{ color: 'white' }}>
                 {!this.props.user._id ? <Redirect push to="/login" /> : ''}
                 <UserBar />
-                <TaskList />
-                <Task />
+                <div className='flex'>
+                    <TaskList />
+                    <Task />
+                </div>
             </div>
         );
     }

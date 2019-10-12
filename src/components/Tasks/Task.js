@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import './tasks.css';
 
 class Task extends React.Component {
     render() {
         console.log('taskdes:', this.props.task);
         const { task } = this.props;
         return (
-            <div>
+            <div className="task">
                 <div>{task.description}</div>
                 <div>
                     Prize: <br />
@@ -30,14 +31,21 @@ class Task extends React.Component {
             const key = question.question;
             const answers = question.answers.map(answer => {
                 return (
-                    <label>
-                        <input type="radio" name="key" /> {answer}
+                    <label key={answer.number}>
+                        <input type="radio" name="key" />
+                        {answer.content}
                     </label>
                 );
             });
-            return <div key={key}>{answers}</div>;
+            return (
+                <div key={key}>
+                    {question.question}
+                    <br />
+                    {answers}
+                </div>
+            );
         });
-        return <div>{questions}</div>;
+        return <div> {questions} </div>;
     };
 }
 

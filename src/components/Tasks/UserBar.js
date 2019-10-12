@@ -7,12 +7,11 @@ import './UserBar.css';
 
 class UserBar extends React.Component {
     state = {
-        isModalOpen: false,
-    }
+        isModalOpen: false
+    };
 
     async componentDidMount() {
         if (!this.props.user.name) this.props.fetchUser(localStorage.getItem('userId'));
-
         await this.props.fetchKnowledgeBaseList()
 
         this.props.fetchKnowledgeBaseElement(this.props.knowledgeList[0].knowledgeId)
@@ -26,8 +25,8 @@ class UserBar extends React.Component {
     };
 
     handleToggleModal = () => {
-        this.setState({isModalOpen: !this.state.isModalOpen})
-    }
+        this.setState({ isModalOpen: !this.state.isModalOpen });
+    };
 
     handleSelectKnowledge = id => {
         this.props.fetchKnowledgeBaseElement(id)
@@ -38,38 +37,42 @@ class UserBar extends React.Component {
 
     render() {
         const { user } = this.props;
-        console.log(this.props.knowledgeList)
+        console.log(this.props.knowledgeList);
 
         return (
             <>
-            <div className="user-bar-container">
-                <div>{user.name}</div>
-                <div>
-                    <div className="ui indicating progress active" data-percent="50">
-                        <div className="bar"></div>
-                        <div className="label">Postęp</div>
-                    </div>
-                </div>
-                <div>
-                    {user.coins}
-                    <img src="dollar.png" alt="dollar" />
-                </div>
-                <div>
-                    {user.experience} <img src="goal.png" alt="goal" />
-                </div>
-                <div className="right-buttons">
-                    <div className="spellbook" onClick={this.handleToggleModal}>
-                        <img src="open-book.png" alt="open book" />
-                        <div>Księga zaklęć</div>
+                <div className="user-bar-container">
+                    <div>{user.name}</div>
+                    <div>
+                        <div className="ui indicating progress active" data-percent="50">
+                            <div className="bar"></div>
+                            <div className="label">Postęp</div>
+                        </div>
                     </div>
                     <div>
-                        <button className="ui button" onClick={this.clickLogout}>
-                            <img src="logout.png" alt="logout" />
-                        </button>
+                        {user.coins}
+                        <img src="dollar.png" alt="dollar" />
                     </div>
+
                 </div>
             </div>
-            <Modal open={this.state.isModalOpen} style={{background: 'black'}}>
+                    <div>
+                        {user.experience} <img src="goal.png" alt="goal" />
+                    </div>
+                    <div className="right-buttons">
+                        <div className="spellbook" onClick={this.handleToggleModal}>
+                            <img src="open-book.png" alt="open book" />
+                            <div>Księga zaklęć</div>
+                        </div>
+                        <div>
+                            <button className="ui button" onClick={this.clickLogout}>
+                                <img src="logout.png" alt="logout" />
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+<Modal open={this.state.isModalOpen} style={{background: 'black'}}>
             <Modal.Header>
                 <div onClick={this.handleToggleModal} className="modal-header">
                     <span>
@@ -99,10 +102,9 @@ class UserBar extends React.Component {
                                 }) : null}</div>
                             </>
                         )}
-                    </div>
-                </div>
-                </Modal.Content>
-            </Modal>
+                        </div>
+                    </Modal.Content>
+                </Modal>
             </>
         );
     }
