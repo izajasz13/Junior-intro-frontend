@@ -1,7 +1,3 @@
-body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./background.png");
-    background-size: cover;
-  }
   body > .grid {
     height: 100%;
   }
@@ -11,6 +7,9 @@ body {
   }
   .ui.middle.aligned.center.aligned.grid {
       height: 100vh;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./background.png");
+      background-size: cover;
+      margin: 0;
   }
   .ui.fluid.large.submit.button {
       background-color: rgb(146, 24, 3);

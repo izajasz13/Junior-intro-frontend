@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import "./map.css";
 
 class Map extends React.Component {
     constructor(props) {
@@ -11,14 +12,14 @@ class Map extends React.Component {
 
     componentDidMount() {
         // Redirect to login if user is not logged
-        if (!this.props.user.userId) this.setState({ redirectToLogin: true });
+      //  if (!this.props.user.userId) this.setState({ redirectToLogin: true });
     }
 
     render() {
         return (
-            <div>
+            <div className='map'>
                 {this.state.redirectToLogin ? <Redirect push to="/login" /> : ''}
-                <ul>
+                <ul className='tasks'>
                     <li>Dział 1</li>
                     <li>Dział 2</li>
                     <li>Dział 3</li>

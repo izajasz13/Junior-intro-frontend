@@ -1,0 +1,13 @@
+body {
+    background-color: burlywood;
+  }
+
+.map {
+    background-image: url("./background.png");
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+}
+.tasks {
+    margin: 0;
+}
