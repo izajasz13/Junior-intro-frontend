@@ -1,5 +1,6 @@
 body {
-    background-color: burlywood;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./background.png");
+    background-size: cover;
   }
 
 .map {
