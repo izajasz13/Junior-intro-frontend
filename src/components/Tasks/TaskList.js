@@ -6,7 +6,6 @@ import { fetchTask } from '../../actions';
 class TaskList extends React.Component {
     componentDidMount() {
         if (!!this.props.section.tasks && this.props.section.tasks.length !== 0) {
-            console.log('Smiling fertilizer: ');
             this.props.fetchTask(this.props.section.tasks[0].taskId);
         }
     }
@@ -19,10 +18,8 @@ class TaskList extends React.Component {
         return <div> {this.renderTasks()}</div>;
     }
     renderTasks() {
-        console.log(this.props.section.tasks);
         if (this.props.section.tasks.length === 0) return <div></div>;
         const tasks = this.props.section.tasks.map(task => {
-            console.log(task);
             return (
                 <button key={task.number} id={task.taskId} onClick={this.clickTask} className="step">
                     <i className="shopping cart icon"></i>

@@ -38,7 +38,6 @@ class UserBar extends React.Component {
 
     render() {
         const { user } = this.props;
-        console.log(this.props.knowledgeList);
 
         return (
             <>
@@ -84,7 +83,6 @@ class UserBar extends React.Component {
                         <div className="content-inner">
                             <div className="left-list">
                                 {this.props.knowledgeList.map(el => {
-                                    console.log(el);
                                     return (
                                         <div
                                             key={el.knowledgeId}

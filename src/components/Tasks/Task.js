@@ -4,7 +4,6 @@ import './tasks.css';
 
 class Task extends React.Component {
     render() {
-        console.log('taskdes:', this.props.task);
         const { task } = this.props;
         return (
             <div className="task">
@@ -25,7 +24,6 @@ class Task extends React.Component {
     }
 
     renderQuestions = () => {
-        console.log('QUUIISSZZZ: ', this.props.task.questions);
         if (!this.props.task.questions || this.props.task.questions.length === 0) return <div></div>;
         const questions = this.props.task.questions.map(question => {
             const key = question.question;
