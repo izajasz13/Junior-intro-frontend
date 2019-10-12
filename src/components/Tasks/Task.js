@@ -7,17 +7,19 @@ class Task extends React.Component {
         const { task } = this.props;
         return (
             <div className="task">
-                <div>{task.description}</div>
-                <div>
-                    Prize: <br />
-                    Experience: {task.prize.exp} <br /> Coins: {task.prize.coins}
-                </div>
-                <div>
-                    Test: <br />
-                    {this.renderQuestions()}
-                    <br />
-                    <br />
-                    <br />
+                <div className="taskText">
+                    <div>{task.description}</div>
+                    <div>
+                    <br /> Nagroda: <br />
+                        Doświadczenie: {task.prize.exp} <br /> Monety: {task.prize.coins}
+                    </div>
+                    <div>
+                    <br /> Test: <br />
+                        {this.renderQuestions()}
+                        <br />
+                        <br />
+                        <br />
+                    </div>
                 </div>
             </div>
         );

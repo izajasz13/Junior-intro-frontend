@@ -7,10 +7,31 @@
 }
 
 .task {
-    background-color: yellow;
-    position: relative;
-    left: 100px;
-    top: 20px;
+    display: flex;
+    background-image: url("./paper4.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 70vw;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.taskText {
+    display: flex;
+    padding: 150px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.taskText div{
+    text-align: center;
 }
 
 .flex {

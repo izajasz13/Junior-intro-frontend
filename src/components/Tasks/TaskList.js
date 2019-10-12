@@ -22,7 +22,7 @@ class TaskList extends React.Component {
         const tasks = this.props.section.tasks.map(task => {
             return (
                 <button key={task.number} id={task.taskId} onClick={this.clickTask} className="step">
-                    <i className="shopping cart icon"></i>
+                    <i className="wrench icon"></i>
                     <div className="content">
                         <div className="title">{task.number + '. ' + (task.name || task.title)}</div>
                         <div className="description">Skompletuj ekwipunek</div>
