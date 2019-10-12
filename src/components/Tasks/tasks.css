@@ -4,6 +4,7 @@
 
 .ui.vertical.steps .step {
     background:#ffbf47;
+    cursor: pointer;
 }
 
 .task {
@@ -22,12 +23,16 @@
 
 .taskText {
     display: flex;
-    padding: 150px;
+    padding: 50px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
+    line-height: 25px;
+    text-shadow: 1px 1px 1px rgb(45, 45, 45);
+    letter-spacing: 1px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .taskText div{
