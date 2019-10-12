@@ -33,7 +33,7 @@
 }
 
 .ui.indicating.progress.active .bar{
-    width: 50%;
+    /* width: 50%; */
 }
 
 .ui.indicating.progress.active .label{

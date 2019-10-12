@@ -10,8 +10,8 @@ class TaskList extends React.Component {
         }
     }
 
-    clickTask = event => {
-        this.props.fetchTask(event.target.id);
+    clickTask = id => {
+        this.props.fetchTask(id);
     };
 
     render() {
@@ -21,7 +21,7 @@ class TaskList extends React.Component {
         if (this.props.section.tasks.length === 0) return <div></div>;
         const tasks = this.props.section.tasks.map(task => {
             return (
-                <button key={task.number} id={task.taskId} onClick={this.clickTask} className="step">
+                <button key={task.number} onClick={() => this.clickTask(task.taskId)} className="step">
                     <i className="wrench icon"></i>
                     <div className="content">
                         <div className="title">{task.number + '. ' + (task.name || task.title)}</div>
