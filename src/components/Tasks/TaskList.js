@@ -12,45 +12,21 @@ class TaskList extends React.Component {
         return <div> {this.renderTasks()}</div>;
     }
     renderTasks() {
-        return (
-            <div class="ui vertical steps">
-                <div class="step">
-                    <i class="shopping cart icon"></i>
-                    <div class="content">
-                        <div class="title">Wyzwanie Pierwsze</div>
-                        <div class="description">Skompletuj ekwipunek</div>
+        console.log(this.props.section.tasks);
+        if (this.props.section.tasks.length === 0) return <div></div>;
+        const tasks = this.props.section.tasks.map(task => {
+            console.log(task);
+            return (
+                <button key={task.number} id={task._id} onClick={this.clickTask} className="step">
+                    <i className="shopping cart icon"></i>
+                    <div className="content">
+                        <div className="title">{task.number + '. ' + task.name}</div>
+                        <div className="description">Skompletuj ekwipunek</div>
                     </div>
-                </div>
-                <div class="step">
-                    <i class="user secret icon"></i>
-                    <div class="content">
-                        <div class="title">Wyzwanie Drugie</div>
-                        <div class="description">Zapytaj Mędrca</div>
-                    </div>
-                </div>
-                <div class="step">
-                    <i class="beer icon"></i>
-                    <div class="content">
-                        <div class="title">Wyzwanie Trzecie</div>
-                        <div class="description">Skompletuj Drużynę</div>
-                    </div>
-                </div>
-                <div class="step">
-                    <i class="book icon"></i>
-                    <div class="content">
-                        <div class="title">Wyzwanie Czwarte</div>
-                        <div class="description">Sprawdź swoją wiedzę</div>
-                    </div>
-                </div>
-                <div class="step">
-                    <i class="gitkraken icon"></i>
-                    <div class="content">
-                        <div class="title">Wyzwanie Piąte</div>
-                        <div class="description">Pokonaj Smoka</div>
-                    </div>
-                </div>
-            </div>
-        );
+                </button>
+            );
+        });
+        return <div className="ui vertical steps">{tasks}</div>;
     }
 }
 

@@ -3,7 +3,6 @@ import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import UserBar from './UserBar';
 import TaskList from './TaskList';
-import Task from './Task';
 import { fetchSection } from '../../actions';
 
 class Tasks extends React.Component {
@@ -14,14 +13,14 @@ class Tasks extends React.Component {
 
     componentDidMount() {
         // Redirect to login if user is not logged
-      //  if (!this.props.user._id) this.setState({ redirectToLogin: true });
-      //  this.props.fetchSection(this.props.match.params.id);
+        if (!this.props.user._id) this.setState({ redirectToLogin: true });
+        this.props.fetchSection(this.props.match.params.id);
     }
 
     render() {
         return (
             <div style={{ color: 'white' }}>
-                {this.state.redirectToLogin ? <Redirect push to="/login" /> : ''}
+                {!this.props.user._id ? <Redirect push to="/login" /> : ''}
                 <UserBar />
                 <TaskList />
             </div>
