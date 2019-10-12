@@ -37,9 +37,9 @@ class Login extends React.Component {
             <div className="ui middle aligned center aligned grid">
                 {!!this.props.user._id ? <Redirect push to="/" /> : ''}
                 <div className="column">
-                    <h2 className="ui teal image header">
+                    {/* <h2 className="ui teal image header">
                         <div className="content">Zaloguj się na konto</div>
-                    </h2>
+                    </h2> */}
                     <form className="ui large form" id="formLogin" onSubmit={this.handleSubmit}>
                         <div className="ui stacked segment">
                             <div className="field">
@@ -68,7 +68,7 @@ class Login extends React.Component {
                                     ></input>
                                 </div>
                             </div>
-                            <button className="ui fluid large teal submit button" form="formLogin">
+                            <button className="ui fluid large submit button" form="formLogin">
                                 Zaloguj
                             </button>
                         </div>
