@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a2e1684e164237ebb67c96e5dd08de55",
+    "revision": "a581a768d83b5fb22c8fdacd86b40dc2",
     "url": "/frontend/index.html"
   },
   {
-    "revision": "e73e578d7858bc9215a5",
-    "url": "/frontend/static/css/main.fedc2b14.chunk.css"
+    "revision": "77fc4a993ec43271e58e",
+    "url": "/frontend/static/css/main.05f98201.chunk.css"
   },
   {
-    "revision": "af8b21bea2d6195d9c26",
-    "url": "/frontend/static/js/2.b1f93675.chunk.js"
+    "revision": "a9a03a14fb35cd0c8487",
+    "url": "/frontend/static/js/2.fffbb840.chunk.js"
   },
   {
-    "revision": "e73e578d7858bc9215a5",
-    "url": "/frontend/static/js/main.a988ae1f.chunk.js"
+    "revision": "77fc4a993ec43271e58e",
+    "url": "/frontend/static/js/main.ff78a954.chunk.js"
   },
   {
     "revision": "95e648b5edb377a1f77f",
@@ -22,6 +22,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3ddd78c3457edd9379a2a8b05dc7e4ab",
     "url": "/frontend/static/media/open-book-icon.3ddd78c3.png"
+  },
+  {
+    "revision": "02a0e083ff60c6b88d6e795c6ff50ce6",
+    "url": "/frontend/static/media/paper4.02a0e083.png"
   },
   {
     "revision": "01c286a03c316b72d47057625ef0a2a9",
