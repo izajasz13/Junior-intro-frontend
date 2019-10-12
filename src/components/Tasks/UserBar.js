@@ -21,11 +21,11 @@ class UserBar extends React.Component {
                     </div>
                 </div>
                 <div>
-                    {user.coins} coins
+                    {user.coins}
                     <img src="dollar.png" alt="dollar" />
                 </div>
                 <div>
-                    1000 <img src="goal.png" alt="goal" />
+                    {user.experience} <img src="goal.png" alt="goal" />
                 </div>
                 <div className="right-buttons">
                     <div className="spellbook">
