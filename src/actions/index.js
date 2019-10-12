@@ -64,7 +64,7 @@ export const postAnswer = (taskId, answer) => async dispatch => {
     if (!taskId || !answer || !userId) return;
     let response;
     try {
-        response = await heroku.post('answer/', { body: { userId, taskId, answer } });
+        response = await heroku.post('task/answer/', { body: { user: userId, id: taskId, answers: answer } });
     } catch (error) {
         return console.log('postAnswer error: ', error);
     }
@@ -98,3 +98,25 @@ export const fetchKnowledgeBaseElement = id => async dispatch => {
         console.log(error);
     }
 };
+
+export const editUser = () => async dispatch => {
+    dispatch({ 
+        type: 'EDIT_USER',
+        payload: { 
+            coins: 22,
+            experience: 50,
+            name: 'Kasia',
+            currentTask: "5da15b3e2ab2c83db872fccc",
+            email:'user1@email.com',
+            password: 'password',
+            _id: '5da102211c9d4400008c41b8',
+        }
+    })
+}
+
+export const editProgress = () => async dispatch => {
+    dispatch({
+        type: 'EDIT_PROGRESS',
+        payload: 2,
+    })
+}

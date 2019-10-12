@@ -38,13 +38,13 @@ class UserBar extends React.Component {
 
     render() {
         const { user } = this.props;
-        if(this.props.section.tasks.length && !this.state.currentNumber) {
-            const currentNumber = this.props.section.tasks.find(task => task._id === this.props.section.currentTask).number;
+        // if(this.props.section.tasks.length && !this.state.currentNumber) {
+        //     const currentNumber = this.props.section.tasks.find(task => task._id === this.props.section.currentTask).number;
 
-            this.setState({ 
-                currentNumber,
-            })
-        }
+        //     this.setState({ 
+        //         currentNumber,
+        //     })
+        // }
 
 console.log(this.state.currentNumber)
         return (
@@ -58,7 +58,7 @@ console.log(this.state.currentNumber)
                     <div>{user.name}</div>
                     <div>
                         <div className="ui indicating progress active" data-percent="50">
-                            <div className="bar" style={{width: `${this.state.currentNumber / 4 *100}%`}}></div>
+                            <div className="bar" style={{width: `${this.props.progress / 4 *100}%`}}></div>
                             <div className="label">Postęp</div>
                         </div>
                     </div>
@@ -136,6 +136,7 @@ const mapStateToProps = state => {
         knowledgeList: state.knowledge.knowledgeList,
         knowledgeElement: state.knowledge.knowledgeElement,
         tasksAmount: state.tasksAmount,
+        progress: state.progress,
     };
 };
 

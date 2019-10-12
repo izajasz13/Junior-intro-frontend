@@ -37,3 +37,9 @@
 .flex {
     display: flex;
 }
+
+.ui.button {
+    color: #bfc48b !important;
+    background-color: rgba(0,0,0,0.6) !important;
+    padding: 10px;
+}

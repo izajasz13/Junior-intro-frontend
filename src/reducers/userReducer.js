@@ -9,6 +9,8 @@ export default (
             return { _id: '', username: '', name: '', email: '', currentTask: null, coins: 0, experience: 0 };
         case 'FETCH_USER':
             return action.payload;
+        case 'EDIT_USER':
+            return action.payload
         default:
             return state;
     }
