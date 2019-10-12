@@ -8,7 +8,7 @@ import App from './components/App';
 import reducers from './reducers';
 
 const initialState = {
-    user: { userId: localStorage.getItem('userId') || '' }
+    user: { _id: localStorage.getItem('userId') || '' }
 };
 
 const store = createStore(reducers, initialState, applyMiddleware(thunk));

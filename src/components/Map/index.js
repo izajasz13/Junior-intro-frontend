@@ -1,6 +1,8 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { fetchUser } from '../../actions';
+import './map.css';
 
 class Map extends React.Component {
     constructor(props) {
@@ -11,14 +13,16 @@ class Map extends React.Component {
 
     componentDidMount() {
         // Redirect to login if user is not logged
-        if (!this.props.user.userId) this.setState({ redirectToLogin: true });
+        if (!this.props.user._id) this.setState({ redirectToLogin: true });
+        // Fetch user data if userId exists
+        if (!this.props.user.username) this.props.fetchUser(this.props.user._id);
     }
 
     render() {
         return (
-            <div>
+            <div className="map">
                 {this.state.redirectToLogin ? <Redirect push to="/login" /> : ''}
-                <ul>
+                <ul className="tasks">
                     <li>Dział 1</li>
                     <li>Dział 2</li>
                     <li>Dział 3</li>
@@ -32,4 +36,7 @@ const mapStateToProps = state => {
     return { user: state.user, section: state.section };
 };
 
-export default connect(mapStateToProps)(Map);
+export default connect(
+    mapStateToProps,
+    { fetchUser }
+)(Map);
