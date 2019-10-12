@@ -19,7 +19,6 @@ class Map extends React.Component {
     }
 
     render() {
-        console.log(this.props.user);
         return (
             <div className="map">
                 {this.state.redirectToLogin ? <Redirect push to="/login" /> : ''}
