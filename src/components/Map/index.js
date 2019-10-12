@@ -19,11 +19,9 @@ class Map extends React.Component {
         return (
             <div className='map'>
                 {this.state.redirectToLogin ? <Redirect push to="/login" /> : ''}
-                <ul className='tasks'>
-                    <li>Dział 1</li>
-                    <li>Dział 2</li>
-                    <li>Dział 3</li>
-                </ul>
+                <button class="ui red button" id="stepOne">Dział 1</button>'>
+                <button class="ui red button" id="stepTwo">Dział 2</button>'>
+                <button class="ui red button" id="stepThree">Dział 3</button>'>
             </div>
         );
     }
