@@ -1,0 +1,39 @@
+.user-bar-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 10vh;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./texture.jpg");
+    color: #e2eb83;
+}
+
+.user-bar-container img {
+    width: 24px;
+    height: 24px;
+}
+
+.user-bar-container button {
+    color: #bfc48b !important;
+    background-color: rgba(0,0,0,0.8) !important;
+}
+
+.user-bar-container button:hover {
+    background-color: rgba(30,30,30,0.8) !important;
+}
+
+.ui.indicating.progress.active {
+    width: 400px;
+    background: rgba(0,0,0, 0.5)
+}
+
+.ui.indicating.progress.active .bar{
+    width: 50%;
+}
+
+.ui.indicating.progress.active .label{
+    color: #e2eb83;
+}
