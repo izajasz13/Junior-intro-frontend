@@ -14,7 +14,7 @@ class Tasks extends React.Component {
 
     componentDidMount() {
         // Redirect to login if user is not logged
-        if (!this.props.user.userId) this.setState({ redirectToLogin: true });
+        if (!this.props.user._id) this.setState({ redirectToLogin: true });
     }
 
     render() {

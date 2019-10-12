@@ -1,5 +1,5 @@
 export default (
-    state = { userId: '', username: '', name: '', email: '', currentTask: null, coins: 0, experience: 0 },
+    state = { _id: '', username: '', name: '', email: '', currentTask: null, coins: 0, experience: 0 },
     action
 ) => {
     switch (action.type) {
