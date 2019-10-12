@@ -23,18 +23,18 @@ class Map extends React.Component {
             <div className="map">
                 {this.state.redirectToLogin ? <Redirect push to="/login" /> : ''}
                 <Link to="/tasks/1">
-                    <button class="ui red button" id="stepOne">
+                    <button className="ui red button" id="stepOne">
                         Dział 1
                     </button>
                 </Link>
                 <Link to="/tasks/2">
-                    <button class="ui red button" id="stepOne">
-                        Dział 1
+                    <button className="ui red button" id="stepTwo">
+                        Dział 2
                     </button>
                 </Link>
                 <Link to="/tasks/3">
-                    <button class="ui red button" id="stepOne">
-                        Dział 1
+                    <button className="ui red button" id="stepThree">
+                        Dział 3
                     </button>
                 </Link>
             </div>
