@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import UserBar from './UserBar';
 import TaskList from './TaskList';
+import Task from './Task';
 import { fetchSection } from '../../actions';
 
 class Tasks extends React.Component {
@@ -23,6 +24,7 @@ class Tasks extends React.Component {
                 {!this.props.user._id ? <Redirect push to="/login" /> : ''}
                 <UserBar />
                 <TaskList />
+                <Task />
             </div>
         );
     }
