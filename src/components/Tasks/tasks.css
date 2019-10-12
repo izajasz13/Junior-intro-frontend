@@ -23,7 +23,7 @@
 
 .taskText {
     display: flex;
-    padding: 180px;
+    padding: 300px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
