@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchUser, logout, fetchKnowledgeBaseList } from '../../actions';
+import { fetchUser, logout, fetchKnowledgeBaseList, fetchKnowledgeBaseElement } from '../../actions';
 import { Modal } from 'semantic-ui-react'
 
 import './UserBar.css';
@@ -10,10 +10,15 @@ class UserBar extends React.Component {
         isModalOpen: false,
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         if (!this.props.user.name) this.props.fetchUser(localStorage.getItem('userId'));
 
-        this.props.fetchKnowledgeBaseList()
+        await this.props.fetchKnowledgeBaseList()
+
+        this.props.fetchKnowledgeBaseElement(this.props.knowledgeList[0].knowledgeId)
+        this.setState({
+            selectedId: this.props.knowledgeList[0].knowledgeId,
+        })
     }
 
     clickLogout = event => {
@@ -22,6 +27,13 @@ class UserBar extends React.Component {
 
     handleToggleModal = () => {
         this.setState({isModalOpen: !this.state.isModalOpen})
+    }
+
+    handleSelectKnowledge = id => {
+        this.props.fetchKnowledgeBaseElement(id)
+        this.setState({
+            selectedId: id,
+        })
     }
 
     render() {
@@ -69,15 +81,24 @@ class UserBar extends React.Component {
                 <div className="content-inner">
                     <div className="left-list">
                         {this.props.knowledgeList.map(el => {
+                            console.log(el)
                             return (
-                                <div className="left-list-element">
+                                <div className={`left-list-element ${this.state.selectedId === el.knowledgeId ? 'selected' : ''}`} onClick={() => this.handleSelectKnowledge(el.knowledgeId)}>
                                     {el.title}
                                 </div>
                             )
                         })}
                     </div>
                     <div className="right-content">
-                        asdasdasdasdasd
+                        {this.props.knowledgeElement && (
+                            <>
+                                <div className="right-header">{this.props.knowledgeElement.title}</div>
+                                <div className="right-description">{this.props.knowledgeElement.description}</div>
+                                <div className="right-content">{this.props.knowledgeElement.content ? this.props.knowledgeElement.content.split(';').map(el => {
+                                    return (<div>{el}</div>)
+                                }) : null}</div>
+                            </>
+                        )}
                     </div>
                 </div>
                 </Modal.Content>
@@ -88,10 +109,10 @@ class UserBar extends React.Component {
 }
 
 const mapStateToProps = state => {
-    return { user: state.user, section: state.section, knowledgeList: state.knowledgeList };
+    return { user: state.user, section: state.section, knowledgeList: state.knowledge.knowledgeList, knowledgeElement: state.knowledge.knowledgeElement };
 };
 
 export default connect(
     mapStateToProps,
-    { fetchUser, logout, fetchKnowledgeBaseList }
+    { fetchUser, logout, fetchKnowledgeBaseList, fetchKnowledgeBaseElement }
 )(UserBar);

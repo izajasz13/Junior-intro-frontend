@@ -87,3 +87,16 @@ export const fetchKnowledgeBaseList = () => async dispatch => {
         console.log(error)
     }
 }
+
+export const fetchKnowledgeBaseElement = id => async dispatch => {
+    try {
+        const response = await heroku.get('/knowledge/'+id)
+        console.log(response)
+        dispatch({ 
+            type: 'FETCH_KNOWLEDGE_BASE_ELEMENT',
+            payload: response.data,
+        })
+    } catch (error) {
+        console.log(error)
+    }
+}

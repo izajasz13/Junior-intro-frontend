@@ -8,5 +8,5 @@ export default combineReducers({
     user: userReducer,
     section: sectionReducer,
     answers: answersReducer,
-    knowledgeList: knowledgeReducer,
+    knowledge: knowledgeReducer,
 });
