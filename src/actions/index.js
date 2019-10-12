@@ -13,6 +13,11 @@ export const login = (username, password) => async dispatch => {
     dispatch({ type: 'LOGIN', payload: response.data });
 };
 
+export const logout = () => dispatch => {
+    localStorage.setItem('userId', '');
+    dispatch({ type: 'LOGOUT' });
+};
+
 export const fetchUser = id => async dispatch => {
     if (!id) return;
     let response;

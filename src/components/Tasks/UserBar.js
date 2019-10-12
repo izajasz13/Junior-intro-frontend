@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchUser } from '../../actions';
+import { fetchUser, logout } from '../../actions';
 
 import './UserBar.css';
 
@@ -8,6 +8,11 @@ class UserBar extends React.Component {
     componentDidMount() {
         if (!this.props.user.name) this.props.fetchUser(localStorage.getItem('userId'));
     }
+
+    clickLogout = event => {
+        this.props.logout();
+    };
+
     render() {
         const { user } = this.props;
 
@@ -33,7 +38,7 @@ class UserBar extends React.Component {
                         <div>Księga zaklęć</div>
                     </div>
                     <div>
-                        <button className="ui button">
+                        <button className="ui button" onClick={this.clickLogout}>
                             <img src="logout.png" alt="logout" />
                         </button>
                     </div>
@@ -49,5 +54,5 @@ const mapStateToProps = state => {
 
 export default connect(
     mapStateToProps,
-    { fetchUser }
+    { fetchUser, logout }
 )(UserBar);

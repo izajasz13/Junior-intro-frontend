@@ -1,0 +1,7 @@
+.ui.vertical.steps {
+    height: 90vh;
+}
+
+.ui.vertical.steps .step {
+    background:#ffbf47;
+}
