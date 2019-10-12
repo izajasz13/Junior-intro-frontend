@@ -11,29 +11,6 @@ class Map extends React.Component {
         const width = window.innerWidth - 100;
         const height = window.innerHeight -100;
 
-        
-        // const width1 = Math.floor(Math.random() * (width - 0 + 1)) + 0;
-        // const height1 = Math.floor(Math.random() * (height - 0 + 1)) + 0;
-        // const width2 = Math.floor(Math.random() * (width - 0 + 1)) + 0;
-        // const height2 = Math.floor(Math.random() * (height - 0 + 1)) + 0;
-        // const width3 = Math.floor(Math.random() * (width - 0 + 1)) + 0;
-        // const height3 = Math.floor(Math.random() * (height - 0 + 1)) + 0;
-        // const width4 = Math.floor(Math.random() * (width - 0 + 1)) + 0;
-        // const height4 = Math.floor(Math.random() * (height - 0 + 1)) + 0;
-        // const width5 = Math.floor(Math.random() * (width - 0 + 1)) + 0;
-        // const height5 = Math.floor(Math.random() * (height - 0 + 1)) + 0;
-
-        // const width1 = width * 0.1
-        // const height1 = height * 0.6
-        // const width2 =  width * 0.3
-        // const height2 =  height * 0.3
-        // const width3 = width * 0.6
-        // const height3 =  height * 0.1
-        // const width4 =  width * 0.65
-        // const height4 =  height * 0.6
-        // const width5 =  width * 0.9
-        // const height5 =  height * 0.55
-
         const width1 = 10
         const height1 = 60
         const width2 =  30
