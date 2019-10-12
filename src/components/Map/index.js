@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchUser } from '../../actions';
 import './map.css';
@@ -84,22 +84,22 @@ class Map extends React.Component {
         return (
             <div className="map">
                 {this.state.redirectToLogin ? <Redirect push to="/login" /> : ''}
-                <div className="button-element" style={{left: width1+'%', top: height1+'%'}}>
+                <Link to="/tasks/1" className="button-element" style={{left: width1+'%', top: height1+'%'}}>
                     {/* <i className="book icon" /> */}
                     <span>Księga 1</span>
-                </div>
-                <div className="button-element" style={{left: width2+'%', top: height2+'%'}}>
+                </Link>
+                <Link to="/tasks/2" className="button-element" style={{left: width2+'%', top: height2+'%'}}>
                     <span>Księga 2</span>
-                </div>
-                <div className="button-element" style={{left: width3+'%', top: height3+'%'}}>
+                </Link>
+                <Link to="/tasks/3" className="button-element" style={{left: width3+'%', top: height3+'%'}}>
                     <span>Księga 3</span>
-                </div>
-                <div className="button-element" style={{left: width4+'%', top: height4+'%'}}>
+                </Link>
+                <Link to="/tasks/4" className="button-element" style={{left: width4+'%', top: height4+'%'}}>
                     <span>Księga 4</span>
-                </div>
-                <div className="button-element" style={{left: width5+'%', top: height5+'%'}}>
+                </Link>
+                <Link to="/tasks/5" className="button-element" style={{left: width5+'%', top: height5+'%'}}>
                     <span>Księga 5</span>
-                </div>
+                </Link>
             </div>
         );
     }
