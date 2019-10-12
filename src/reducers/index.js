@@ -4,6 +4,7 @@ import sectionReducer from './sectionReducer';
 import answersReducer from './answersReducer';
 import knowledgeReducer from './knowledgeReducer';
 import taskReducer from './taskReducer';
+// import tasksAmountReducer from './tasksAmountReducer';
 
 export default combineReducers({
     user: userReducer,
@@ -11,5 +12,6 @@ export default combineReducers({
     answers: answersReducer,
     knowledge: knowledgeReducer,
     knowledgeList: knowledgeReducer,
-    task: taskReducer
+    task: taskReducer,
+    // tasksAmount: tasksAmountReducer,
 });
